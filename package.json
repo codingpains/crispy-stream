@@ -1,0 +1,34 @@
+{
+  "name": "cirspy-stream",
+  "description": "In-Memory Stream Implementation",
+  "version": "0.0.0",
+  "keywords": [
+    "stream",
+    "readable",
+    "writable",
+    "pipe",
+    "memory"
+  ],
+  "scripts": {
+    "test": "tape test/*.js",
+    "coverage": "istanbul cover tape -- test/*.js"
+  },
+  "homepage": "https://github.com/codingpains/crispy-stream",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/codingpains/crispy-stream.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Gustavo Ortiz",
+    "email": "gustavo.ortiz.monroy@gmail.com",
+    "url": "http://medium.com/@codingpains"
+  },
+  "main": "./lib/index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "istanbul": "^0.3.20",
+    "jshint": "^2.8.0",
+    "tape": "^4.2.0"
+  }
+}
