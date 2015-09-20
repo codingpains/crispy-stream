@@ -1,7 +1,7 @@
 {
   "name": "crispy-stream",
   "description": "In-Memory Stream Implementation",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "keywords": [
     "stream",
     "readable",
