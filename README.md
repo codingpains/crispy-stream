@@ -2,6 +2,7 @@
 [![Build Status](https://travis-ci.org/codingpains/crispy-stream.svg?branch=master)](https://travis-ci.org/codingpains/crispy-stream)
 [![Code Climate](https://codeclimate.com/github/codingpains/crispy-stream/badges/gpa.svg)](https://codeclimate.com/github/codingpains/crispy-stream)
 [![Test Coverage](https://codeclimate.com/github/codingpains/crispy-stream/badges/coverage.svg)](https://codeclimate.com/github/codingpains/crispy-stream/coverage)
+[![NPM](https://nodei.co/npm/crispy-stream.png?mini=true)](https://npmjs.org/package/crispy-stream)
 
 Lets imagine you want to test how a lib you created behaves when using its 'stream-mode' and, of course you don't want to read and write from file system. So what should you do? Well you should use this package which is an implementation of [Stream](https://nodejs.org/api/stream.html#stream_api_for_stream_implementors).
 
