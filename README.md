@@ -3,12 +3,10 @@
 [![Code Climate](https://codeclimate.com/github/codingpains/crispy-stream/badges/gpa.svg)](https://codeclimate.com/github/codingpains/crispy-stream)
 [![Test Coverage](https://codeclimate.com/github/codingpains/crispy-stream/badges/coverage.svg)](https://codeclimate.com/github/codingpains/crispy-stream/coverage)
 
-Lets imagine you want to test how a lib you created behaves when using its 'stream-mode' and, of course you don`t want to read from file system and write to file system.
+Lets imagine you want to test how a lib you created behaves when using its 'stream-mode' and, of course you don't want to read and write from file system. So what should you do? Well you should use this package which is an implementation of [Stream](https://nodejs.org/api/stream.html#stream_api_for_stream_implementors).
 
-What you do? Well you use this implementation of [Stream](https://nodejs.org/api/stream.html#stream_api_for_stream_implementors).
-
-This library implements the [Stream abstract interface](https://nodejs.org/api/stream.html) so you use it
-as you would any other Stream.
+Because this library implements [Node's Stream abstract interface](https://nodejs.org/api/stream.html) you can use it
+as you would any other Stream implementation.
 
 ## Installation
 
