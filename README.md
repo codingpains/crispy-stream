@@ -10,7 +10,7 @@ as you would any other Stream implementation.
 
 ## Installation
 
-```js
+```
  $ npm install crispy-stream
 ```
 
