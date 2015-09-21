@@ -2,20 +2,20 @@
 var test = require('tape');
 var Writable = require('./../lib/writable');
 
-function createWritableStream() {
+function createWriteStream() {
   return new Writable();
 }
 
 test('Writable - create: should create instance of WritableMemoryStream', function(assert) {
   var expected = 'WritableMemoryStream';
-  var actual = createWritableStream().constructor.name;
+  var actual = createWriteStream().constructor.name;
 
   assert.equal(actual, expected, 'class is correct');
   assert.end();
 });
 
 test('Writable - create: should start with empty array', function(assert) {
-  var writable = createWritableStream();
+  var writable = createWriteStream();
 
   var expected = true;
   var actual = writable._data instanceof Array;
@@ -29,7 +29,7 @@ test('Writable - create: should start with empty array', function(assert) {
 });
 
 test('Writable - write: should append buffers to data array', function(assert) {
-  var writable = createWritableStream();
+  var writable = createWriteStream();
   var enc = 'utf-8';
 
   writable.write('oenyi!', enc, function() {
@@ -53,7 +53,7 @@ test('Writable - write: should append buffers to data array', function(assert) {
 });
 
 test('Writable - write: should only write buffers and strings', function(assert) {
-  var writable = createWritableStream();
+  var writable = createWriteStream();
   var enc = 'utf-8';
   var expected;
   var actual;
@@ -80,7 +80,7 @@ test('Writable - write: should only write buffers and strings', function(assert)
 });
 
 test('Writable - toString: should return empty string when empty', function(assert) {
-  var writable = createWritableStream();
+  var writable = createWriteStream();
   var expected = '';
   var actual = writable.toString();
 
@@ -89,7 +89,7 @@ test('Writable - toString: should return empty string when empty', function(asse
 });
 
 test('Writable - toString: should apply encoding', function(assert) {
-  var writable = createWritableStream();
+  var writable = createWriteStream();
   var input = 'special characters ñ@®©ú';
   writable.write(input, 'utf-8', function(error) {
     if (error) {

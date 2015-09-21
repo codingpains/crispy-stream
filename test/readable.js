@@ -2,7 +2,7 @@
 var test = require('tape');
 var Readable = require('./../lib/readable');
 
-function createReadableStream(input) {
+function createReadStream(input) {
   return new Readable(input);
 }
 
@@ -11,7 +11,7 @@ test('create: should throw if input is not a string or buffer', function(assert)
   var actual;
 
   try {
-    createReadableStream(19982938);
+    createReadStream(19982938);
   } catch(error) {
     actual = error.name;
   }
@@ -22,7 +22,7 @@ test('create: should throw if input is not a string or buffer', function(assert)
 
 test('create: should not throw when input is string', function(assert) {
   try {
-    createReadableStream('input string');
+    createReadStream('input string');
   } catch(error) {
     assert.fail('unexpected error');
     return assert.end();
@@ -34,7 +34,7 @@ test('create: should not throw when input is string', function(assert) {
 
 test('create: should not throw when input is buffer', function(assert) {
   try {
-    createReadableStream(new Buffer('input string'));
+    createReadStream(new Buffer('input string'));
   } catch(error) {
     assert.fail('unexpected error');
     return assert.end();
@@ -48,7 +48,7 @@ test('read: should read when input is string', function(assert) {
   var expected = 'oenyi! oenyi! oenyi!...';
   var actual = '';
 
-  createReadableStream(expected)
+  createReadStream(expected)
     .on('data', function(data) {
       actual += data;
     })
@@ -62,7 +62,7 @@ test('read: should read when input is buffer', function(assert) {
   var expected = 'oenyi! oenyi! oenyi!...';
   var actual = '';
 
-  createReadableStream(new Buffer(expected))
+  createReadStream(new Buffer(expected))
     .on('data', function(data) {
       actual += data;
     })
